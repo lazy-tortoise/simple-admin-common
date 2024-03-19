@@ -42,5 +42,7 @@ func (IDInt64Mixin) Fields() []ent.Field {
 			UpdateDefault(time.Now).
 			Comment("Update Time | 修改日期").
 			Annotations(entsql.WithComments(true)),
+		//租户id
+		field.Int("tenant_id").Default(0).Comment("Tenant ID | 租户ID").Annotations(entsql.WithComments(true)),
 	}
 }
